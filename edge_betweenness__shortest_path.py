@@ -26,6 +26,14 @@ def edge_betweenness(G: nx.Graph | nx.DiGraph):
   return between
 
 if __name__ == "__main__":
+  # from load_custom_graph import load_custom_graph
+  # from constants import GS
+  # for G_index in GS[:3]:
+  #   print(f'Graph {G_index}:')
+  #   G = load_custom_graph(G_index)
+  #   print(edge_betweenness(G))
+  #   print()
   from load_custom_graph import load_custom_graph
-  G = load_custom_graph(1)
-  print(edge_betweenness(G))
+  from visualize_graph import *
+  G = load_custom_graph(2)
+  visualize_edge_feature_graph(G, edge_betweenness(G))

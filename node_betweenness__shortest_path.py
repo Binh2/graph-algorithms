@@ -25,5 +25,6 @@ def node_betweenness(G: nx.Graph):
 
 if __name__ == "__main__":
   from load_custom_graph import load_custom_graph
-  G = load_custom_graph(1)
-  print(node_betweenness(G))
+  from visualize_graph import *
+  G = load_custom_graph(2)
+  visualize_node_feature_graph(G, node_betweenness(G))

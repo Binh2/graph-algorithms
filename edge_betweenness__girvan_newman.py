@@ -88,5 +88,9 @@ def edge_betweenness(G: nx.Graph | nx.DiGraph):
   
 
 if __name__ == "__main__":
+  # from load_custom_graph import load_custom_graph
+  # print(edge_betweenness(load_custom_graph(3)))
   from load_custom_graph import load_custom_graph
-  print(edge_betweenness(load_custom_graph(3)))
+  from visualize_graph import *
+  G = load_custom_graph(2)
+  visualize_edge_feature_graph(G, edge_betweenness(G))

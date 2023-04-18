@@ -22,5 +22,9 @@ def pagerank_centrality(G: nx.Graph | nx.DiGraph, damping_factor: float = 0.85, 
   return pagerank
 
 if __name__ == "__main__":
+  # from load_custom_graph import load_custom_graph
+  # print(pagerank_centrality(load_custom_graph(3)))
   from load_custom_graph import load_custom_graph
-  print(pagerank_centrality(load_custom_graph(3)))
+  from visualize_graph import *
+  G = load_custom_graph(2)
+  visualize_node_feature_graph(G, pagerank_centrality(G))
