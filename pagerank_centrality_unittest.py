@@ -4,7 +4,7 @@ from load_custom_graph import load_custom_graph
 
 
 class Test(unittest.TestCase):
-  def __init__(self, inp, out, function, decimal_places: int = 2):
+  def __init__(self, inp, out, function, decimal_places: int = 4):
     super(Test, self).__init__()
     self.input = inp
     self.output = out

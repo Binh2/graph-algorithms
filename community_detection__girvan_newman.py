@@ -34,7 +34,9 @@ def girvan_newman_algorithm(G):
 if __name__ == "__main__":
   # G = nx.barbell_graph(5, 0)
   G = load_custom_graph(2)
+  print("Kết quả từ code của ChatGPT: ")
   print(girvan_newman_algorithm(G))
+  print("\nKết quả từ code của thư viện có sẵn: ")
   print(*[community for community in nx.community.girvan_newman(G)])
 
 # import networkx as nx

@@ -1,3 +1,4 @@
+import networkx as nx
 from timeit import timeit, Timer
 from typing import List
 from load_custom_graph import load_custom_graph
@@ -10,6 +11,7 @@ from constants import TIMING_NUMBER_OF_ITERATION as NUMBER_OF_ITERATION, TIMING_
 node_betweennesses = { 
   "Shortest path method": edge_betweenness1,
   "Girvan Newman method": edge_betweenness2,
+  "Library method": nx.betweenness_centrality,
 }
 timing_array = []
 for i in range(len(Gs)):

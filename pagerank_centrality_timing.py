@@ -1,3 +1,4 @@
+import networkx as nx
 from timeit import timeit, Timer
 from typing import List
 from pagerank_centrality import pagerank_centrality
@@ -6,7 +7,10 @@ from print_2darray import print_2darray
 from constants import TIMING_NUMBER_OF_ITERATION as NUMBER_OF_ITERATION, TIMING_GS as Gs
 
 
-functions = { "Normal method": pagerank_centrality }
+functions = { 
+  "Normal method": pagerank_centrality,
+  "Library method": nx.pagerank,
+}
 timing_array = []
 for i in range(len(Gs)):
   timing_array.append([])
