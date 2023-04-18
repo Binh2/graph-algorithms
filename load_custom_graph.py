@@ -43,7 +43,7 @@ if __name__ == "__main__":
   from visualize_graph import *
   from argparse import ArgumentParser
   argParser = ArgumentParser("Load custom graph")
-  argParser.add_argument("-g", "--graphs", default=[1,2,3], nargs='+', type=int, help="Add the graph type here to display it")
+  argParser.add_argument("-g", "--graphs", default=[1,2,3,11,12,13], nargs='+', type=int, help="Add the graph type here to display it")
   args = argParser.parse_args()
   if len(args.graphs) > 1:
     Gs = []

@@ -16,6 +16,11 @@ def visualize_graphs(Gs: list[nx.Graph], display_label=True):
     2: {"nrows": 2, "ncols": 1},
     3: {"nrows": 2, "ncols": 2},
     4: {"nrows": 2, "ncols": 2},
+    5: {"nrows": 2, "ncols": 3},
+    6: {"nrows": 2, "ncols": 3},
+    7: {"nrows": 2, "ncols": 4},
+    8: {"nrows": 2, "ncols": 4},
+    9: {"nrows": 3, "ncols": 3},
   }
   fig, axes = plt.subplots(**sizes[len(Gs)])
   ax = axes.flatten()
