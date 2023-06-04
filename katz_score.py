@@ -75,7 +75,7 @@ if __name__ == '__main__':
   for pair, score in list(sorted_katz_scores.items())[len(list(katz_scores.items()))-11:]:
     print(f"KatzGF score for {pair}: {score}")
 
-  visual
+  # visual
 
   # print('node library self')
   # for n, c1, c2 in zip(library_centrality.keys(), library_centrality.values(), self_centrality.values()):
