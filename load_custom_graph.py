@@ -1,3 +1,4 @@
+import pandas as pd
 import networkx as nx
 from load_twitter import load_twitter
 
@@ -35,6 +36,10 @@ def load_custom_graph(type: int):
     G = load_twitter(number_of_edges=1000000)
   elif type == 17:
     G = load_twitter()
+  elif type == 21:
+    df = pd.read_csv('./group-edges.csv')
+    df = df[:50]
+    G = nx.from_pandas_edgelist(df, source='group1', target='group2', edge_attr='weight')
   
   return G
 
